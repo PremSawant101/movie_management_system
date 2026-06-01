@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Movie Management</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="top-bar">
+            <h1>Movie Management</h1>
+            <a href="/add-movie" class="btn">Add Movie</a>
+        </div>
+
+        <div class="movie-grid">
+            <% movies.forEach(movie=> { %>
+
+                <div class="movie-card">
+                    <img src="/uploads/<%= movie.image %>" alt="movie">
+
+                    <div class="movie-content">
+                        <h2>
+                            <%= movie.movieName %>
+                        </h2>
+
+                        <p>
+                            <%= movie.description %>
+                        </p>
+
+                        <span>
+                            <%= movie.category %> • <%= movie.year %>
+                        </span>
+
+                        <div class="actions">
+                            <a href="/edit-movie/<%= movie._id %>" class="edit-btn">Edit</a>
+                            <a href="/delete-movie/<%= movie._id %>" class="delete-btn">Delete</a>
+                        </div>
+                    </div>
+                </div>
+
+                <% }) %>
+        </div>
+    </div>
+
+</body>
+
+</html>

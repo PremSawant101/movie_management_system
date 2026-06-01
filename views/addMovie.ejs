@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <div class="form-card">
+            <h1>Add Movie</h1>
+
+            <form action="/add-movie" method="POST" enctype="multipart/form-data">
+                <input type="text" name="movieName" placeholder="Movie Name" required>
+
+                <textarea name="description" placeholder="Description" required></textarea>
+
+                <input type="number" name="year" placeholder="Release Year" required>
+
+                <input type="text" name="category" placeholder="Category" required>
+
+                <input type="file" name="image" required>
+
+                <button type="submit">Add Movie</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
